@@ -52,8 +52,21 @@ public class GameController{
                 if ((row < this.tableRows+1 && row > 0) && (column < this.tableColumns+1 && column > 0)){
                         if (table.getToken(row, column) == Token.EMPTY.getVisual()){
                                 table.setCursor(row, column, currentPlayer.getVisual());
-                                table.checkForLine(currentPlayer.getVisual());
-                                currentPlayer = (currentPlayer == X) ? O : X;
+                                if (!table.checkForLine(currentPlayer.getVisual())){
+                                        currentPlayer = (currentPlayer == X) ? O : X;
+                                } else {
+                                        Scanner nextGame = new Scanner(System.in);
+                                        System.out.println("[Presione <ENTER> para continuar]");
+                                        nextGame.nextLine();
+                                        this.table.clearTable();
+                                }
+                                if (table.setDraw()){
+                                        Scanner nextGame = new Scanner(System.in);
+                                        System.out.println("\n" + Token.X.getVisual()+" [EMPATE] "+Token.O.getVisual()+"\n");
+                                        System.out.println("[Presione <ENTER> para continuar]");
+                                        nextGame.nextLine();
+                                        this.table.clearTable();
+                                }
                         }
                 }
         }

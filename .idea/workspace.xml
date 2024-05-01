@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2a5ccfc-058c-46a8-a9eb-93b7de146ae0" name="Changes" comment="type exception handler">
+    <list default="true" id="d2a5ccfc-058c-46a8-a9eb-93b7de146ae0" name="Changes" comment="s">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Table/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +51,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/tamip/Desktop/JAVA ROADMAP/Tik-Tak-Toe/src/Main.java",
     "settings.editor.selected.configurable": "configurable.group.appearance"
@@ -104,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714531309617</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="s">
+      <option name="closed" value="true" />
+      <created>1714531329874</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714531329874</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -112,7 +123,8 @@
     <MESSAGE value="change player icon" />
     <MESSAGE value="clear table function" />
     <MESSAGE value="type exception handler" />
-    <option name="LAST_COMMIT_MESSAGE" value="type exception handler" />
+    <MESSAGE value="s" />
+    <option name="LAST_COMMIT_MESSAGE" value="s" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Tik_Tak_Toe$Main.ic" NAME="Main Coverage Results" MODIFIED="1714479909134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
