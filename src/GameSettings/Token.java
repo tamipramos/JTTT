@@ -1,9 +1,9 @@
 package GameSettings;
 
 public enum Token {
-    X("\uD83D\uDD33"),
+    X("⬜"),
     O("\uD83D\uDD18"),
-    EMPTY("⬜");
+    EMPTY("\uD83D\uDD33");
 
     private final String visual;
 
