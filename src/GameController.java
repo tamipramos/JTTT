@@ -9,8 +9,9 @@ public class GameController{
         private final Token O = Token.O;
 
         private Token currentPlayer = X;
-
-        private Table table = new Table(3, 3);
+        int tableRows=3;
+        int tableColumns=3;
+        private Table table = new Table(tableRows, tableColumns);
 
         public GameController(Boolean gameModeNumbers) {
 
@@ -29,21 +30,34 @@ public class GameController{
                 table.drawTable();
                 int column;
                 int row;
-
+                System.out.println("Turno del jugador -> "+currentPlayer.getVisual());
                 System.out.print("Ingrese fila: ");
-                row = input.nextInt();
+                try {
+                        row = input.nextInt();
+                } catch (Exception e) {
+                        row=-1;
+                }
                 System.out.print("Ingrese columna: ");
-                column = input.nextInt();
+                try {
+                        column = input.nextInt();
+                } catch (Exception e){
+                        column=-1;
+                        System.out.print("\u001b[31m[!] Error de input\u001b[0m\n\n\n");
+                }
                 placeToken(column, row);
 
         }
 
         private void placeToken(int row, int column) {
-                if (table.getToken(row, column) == Token.EMPTY.getVisual()) {
-                        table.setCursor(row, column, currentPlayer.getVisual());
-                        currentPlayer = (currentPlayer == X) ? O : X;
+                if ((row < this.tableRows+1 && row > 0) && (column < this.tableColumns+1 && column > 0)){
+                        if (table.getToken(row, column) == Token.EMPTY.getVisual()){
+                                table.setCursor(row, column, currentPlayer.getVisual());
+                                table.checkForLine(currentPlayer.getVisual());
+                                currentPlayer = (currentPlayer == X) ? O : X;
+                        }
                 }
         }
+
 }
 
 
