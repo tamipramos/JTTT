@@ -7,25 +7,49 @@
 
 
 ````dtd
-Ingrese fila: 1     Ingrese fila: 3
-Ingrese columna: 1  Ingrese columna: 3
-🔳⬜⬜             🔳⬜⬜
-⬜⬜⬜             ⬜⬜⬜
-⬜⬜⬜             ⬜⬜🔘
 
-Ingrese fila: 1     Ingrese fila: 3
-Ingrese columna: 2  Ingrese columna: 1
-🔳🔳⬜             🔳🔳⬜
-⬜⬜⬜             ⬜⬜⬜
-⬜⬜🔘             🔘⬜🔘
+🔳🔳🔳
+🔳🔳🔳
+🔳🔳🔳
+Turno del jugador -> ⬜
+Ingrese fila: 1
+Ingrese columna: 1
+⬜🔳🔳
+🔳🔳🔳
+🔳🔳🔳
+Turno del jugador -> 🔘
+Ingrese fila: 1
+Ingrese columna: 3
+⬜🔳🔘
+🔳🔳🔳
+🔳🔳🔳
 
-Ingrese fila: 3     Ingrese fila: 1
-Ingrese columna: 2  Ingrese columna: 3
-🔳🔳⬜             🔳🔳🔘
-⬜⬜⬜             ⬜⬜⬜
-🔘🔳🔘             🔘🔳🔘
+[...]
 
+Turno del jugador -> ⬜
+Ingrese fila: 3
+Ingrese columna: 3
+⬜🔳🔘
+🔳⬜🔳
+🔘🔳⬜
+GANADOR: ⬜
 
+[Presione <ENTER> para continuar] 
+    
+[...]
+    
+⬜🔘⬜
+⬜🔘🔘
+🔘⬜🔳
+Turno del jugador -> ⬜
+Ingrese fila: 3
+Ingrese columna: 3
+⬜🔘⬜
+⬜🔘🔘
+🔘⬜⬜
 
-	
+⬜ [EMPATE] 🔘
+
+[Presione <ENTER> para continuar]
+
 ````
