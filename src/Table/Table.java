@@ -30,13 +30,52 @@ public class Table {
                 }
             System.out.println();
         }
+    }
+
+    public void clearTable(){
+        int row=0;
+        for (String[] v : this.table) {
+            int column=0;
+            for (String h : v) {
+                this.table[row][column]= Token.EMPTY.getVisual();
+                column++;
+            }
+            row++;
         }
+    }
 
     public void setCursor(int row, int column, String token){
             this.table[column-1][row-1] = token;
     }
 
     public String getToken(int row, int column){
-        return this.table[row-1][column-1];
+        return this.table[column-1][row-1];
     }
+
+    public boolean checkForLine(String currentCharacter) {
+        int x=0;
+        for (String[] v : this.table) {
+            int y=0;
+            for (String h : v) {
+                if (h == currentCharacter){
+                    try {
+                        if ((this.table[x][y + 1] == currentCharacter && this.table[x][y + 2] == currentCharacter)
+                        || (this.table[x+1][y] == currentCharacter && this.table[x+2][y] == currentCharacter)
+                        || (this.table[x+1][y+1] == currentCharacter && this.table[x+2][y+2] == currentCharacter)
+                        || (this.table[x+1][y-1] == currentCharacter && this.table[x+2][y-2] == currentCharacter)){
+                            System.out.println("GANADOR: "+currentCharacter+"\n");
+                            return true;
+
+                        }
+                    } catch (Exception e){
+                        return false;
+                    }
+                }
+                y++;
+            }
+            x++;
+        }
+        return false;
+    }
+
 }
