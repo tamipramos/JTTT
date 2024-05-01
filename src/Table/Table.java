@@ -108,7 +108,7 @@ public class Table {
     }
 
     public boolean setDraw(){
-        if (!Arrays.stream(this.table).flatMap(Arrays::stream).anyMatch(x -> x.equals(Token.EMPTY.getVisual()))){
+        if (Arrays.stream(this.table).flatMap(Arrays::stream).noneMatch(x -> x.equals(Token.EMPTY.getVisual()))){
             drawTable();
             return true;
         }
